@@ -4,7 +4,9 @@ uv.lock
 __pycache__/
 *.py[cod]
 
-# Generated dataset + training outputs
+# Downloaded dataset (fetch with download_dataset.py) + generated splits
+PV-Multi-Defect/
+PV-Multi-Defect__tmp/
 datasets/
 runs/
 wandb/

@@ -52,8 +52,9 @@ def convert_annotation(xml_path: Path) -> str:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--voc-root", required=True,
-                    help="folder containing Annotations/ and JPEGImages/")
+    ap.add_argument("--voc-root", default="PV-Multi-Defect",
+                    help="folder containing Annotations/ and JPEGImages/ "
+                         "(run download_dataset.py first)")
     ap.add_argument("--out", default="datasets/pv", help="output dataset root")
     ap.add_argument("--val-ratio", type=float, default=0.20)
     ap.add_argument("--seed", type=int, default=0)

@@ -35,11 +35,14 @@ The yaml configs and data prep here are framework-version independent.
 
 ## 2. Data
 
+The dataset is not committed. Download it from the portal, then convert:
+
 ```bash
-uv run python prepare_pv_data.py \
-  --voc-root ../PV-Multi-Defect-main/PV-Multi-Defect-main
+uv run python download_dataset.py      # -> ./PV-Multi-Defect (from GitHub portal)
+uv run python prepare_pv_data.py       # -> datasets/pv/{images,labels}/{train,val}
 ```
-Writes `datasets/pv/{images,labels}/{train,val}/`. `data/pv.yaml` points at it.
+`data/pv.yaml` points at `datasets/pv`. Portal:
+https://github.com/CCNUZFW/PV-Multi-Defect
 
 ## 3. Pretrained weights
 
