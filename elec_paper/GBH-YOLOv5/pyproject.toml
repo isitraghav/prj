@@ -1,0 +1,30 @@
+[project]
+name = "gbh-yolov5-pv"
+version = "0.1.0"
+description = "Reproduction of GBH-YOLOv5 (Electronics 2023, 12, 561) on PV-Multi-Defect"
+requires-python = ">=3.8,<3.11"
+
+# YOLOv5 v5.0-era code: pin numpy<1.24 (np.int/np.float removed later) and a
+# torch that still exposes the v5.0 APIs. torch/torchvision below are the CPU
+# resolvable defaults; for GPU install the matching CUDA build (see REPRODUCE.md).
+dependencies = [
+    "numpy==1.23.5",
+    "torch==1.12.1",
+    "torchvision==0.13.1",
+    "opencv-python>=4.1.2,<4.9",
+    "Pillow<10",
+    "PyYAML>=5.3.1",
+    "scipy>=1.4.1",
+    "tqdm>=4.41.0",
+    "matplotlib>=3.2.2,<3.8",
+    "seaborn>=0.11.0",
+    "pandas",
+    "tensorboard>=2.4.1",
+    "thop",
+    "requests",
+    "setuptools<80",  # v5.0 code imports pkg_resources; dropped in setuptools>=81
+    "pycocotools>=2.0",  # required by check_requirements() in train.py
+]
+
+[tool.uv]
+# CUDA wheels are pulled from the PyTorch index in REPRODUCE.md, not resolved here.

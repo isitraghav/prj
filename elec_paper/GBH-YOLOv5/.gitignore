@@ -1,0 +1,21 @@
+# Python env / uv
+.venv/
+uv.lock
+__pycache__/
+*.py[cod]
+
+# Generated dataset + training outputs
+datasets/
+runs/
+wandb/
+*.cache
+
+# Weights / model wheels (large, downloaded)
+*.pt
+*.pth
+*.whl
+*.onnx
+
+# OS
+.DS_Store
+Thumbs.db

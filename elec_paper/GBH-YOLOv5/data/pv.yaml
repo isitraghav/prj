@@ -1,0 +1,7 @@
+# PV-Multi-Defect dataset (GBH-YOLOv5 paper)
+# Build with: uv run python prepare_pv_data.py --voc-root ../PV-Multi-Defect-main/PV-Multi-Defect-main
+train: ./datasets/pv/images/train/
+val: ./datasets/pv/images/val/
+
+nc: 5
+names: ['broken', 'hot_spot', 'black_border', 'scratch', 'no_electricity']

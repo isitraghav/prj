@@ -1,0 +1,30 @@
+# Hyperparameters for PV-Multi-Defect (GBH-YOLOv5 paper).
+# Paper: Adam optimizer, lr 0.001, batch 16, 500 epochs, COCO-pretrained weights.
+# Use with:  --adam  (train.py reads lr0 as Adam lr and momentum as beta1).
+lr0: 0.001  # Adam initial learning rate (paper)
+lrf: 0.2  # final OneCycleLR learning rate (lr0 * lrf)
+momentum: 0.937  # Adam beta1
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+box: 0.05
+cls: 0.5
+cls_pw: 1.0
+obj: 1.0
+obj_pw: 1.0
+iou_t: 0.20
+anchor_t: 4.0
+fl_gamma: 0.0
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.0
