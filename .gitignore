@@ -1,0 +1,19 @@
+# Cloned datasets / upstream repos — re-fetch with setup_datasets.sh (too big for git)
+res-cnn3_paper/elpv-dataset/
+udensenet_paper/InfraredSolarModules/
+elseg_paper/UCF-EL-Defect/
+
+# Trained weights / checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Python caches / envs
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS junk
+__MACOSX/
+.DS_Store

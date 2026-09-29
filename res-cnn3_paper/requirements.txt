@@ -1,0 +1,9 @@
+numpy
+pillow
+scikit-learn
+opencv-contrib-python
+# torch + torchvision: install the CUDA build separately (the default wheel is
+# CPU-only). For the RTX 2050 on this machine (driver 591.86, CUDA 13):
+#   pip install --index-url https://download.pytorch.org/whl/cu128 torch torchvision
+torch
+torchvision
